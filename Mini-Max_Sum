@@ -1,0 +1,9 @@
+long min=0,max=0;
+      for (int i=0;i<arr.length-1;i++)
+      {
+          Arrays.sort(arr);
+          min=min+arr[i];       
+          max=max+arr[i+1];
+      }
+      System.out.println(min+" "+max);
+      

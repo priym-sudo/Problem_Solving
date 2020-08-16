@@ -1,0 +1,17 @@
+for (int i=0;i<grades.size();i++)
+       {
+           int t=grades.get(i);
+           int round=(t/5+1)*5;
+           if(round<40){
+               grade.add(t);
+           }
+           else if(round-t<3)
+           {
+               grade.add(round);
+           }
+           else
+           {
+               grade.add(t);
+           }
+       }
+       return grade;

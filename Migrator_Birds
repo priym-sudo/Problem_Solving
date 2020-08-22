@@ -1,0 +1,15 @@
+int max=0;
+        int ar[]=new int[3 << 1];
+        for(int i:arr)
+        {
+          ar[i]++;
+          max=Math.max(max,ar[i]);
+        }
+        for (int j=0;j<ar.length;j++)
+        {
+            if(ar[j]==max)
+            {
+                return j;
+            }
+        }
+        return 0;

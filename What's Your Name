@@ -1,0 +1,3 @@
+    print ("Hello %s %s! You just delved into python."%(a,b))
+First_name='Rose'
+last_name='Taylor'

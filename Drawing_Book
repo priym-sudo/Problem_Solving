@@ -1,0 +1,6 @@
+int ans=0;
+        int front=p/2;
+        int back=(n/2-p/2);
+        if(front<back) ans=front;
+        else ans=back;
+       return ans;

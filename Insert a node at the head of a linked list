@@ -1,0 +1,4 @@
+ SinglyLinkedListNode sl=new SinglyLinkedListNode(data);
+         sl.next=llist;
+         llist=sl;
+         return llist;

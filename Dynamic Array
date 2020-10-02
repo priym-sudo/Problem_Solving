@@ -1,0 +1,19 @@
+int lastAnswer = 0;
+    List<Integer> answerList = new ArrayList<Integer>();
+    List<List<Integer>> seqList = new ArrayList<>();
+    for (int i = 0; i < n; i++) {
+        seqList.add(new ArrayList());
+    }
+    int x = 0, y = 0, size = 0;
+    for (int i = 0; i < queries.size(); i++) {
+        x = queries.get(i).get(1);
+        y = queries.get(i).get(2);
+        if (queries.get(i).get(0) == 1) {
+            seqList.get(((x^lastAnswer)%n)).add(y);
+        } else if (queries.get(i).get(0) == 2) {
+            size = seqList.get(((x^lastAnswer)%n)).size();
+            lastAnswer = seqList.get(((x^lastAnswer)%n)).get(y%size);
+            answerList.add(lastAnswer);
+        }
+    }
+    return answerList;

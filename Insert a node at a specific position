@@ -1,0 +1,19 @@
+SinglyLinkedListNode newnode = new SinglyLinkedListNode(data);
+            newnode.next = null;
+            newnode.data = data;
+
+            if(position== 0)
+            {
+                head = newnode;
+            }
+            else
+            {
+                SinglyLinkedListNode temp = head;
+                for(int i = 0 ; i < position - 1 ; i++)
+                {
+                    temp = temp.next;
+                }
+                newnode.next = temp.next;
+                temp.next = newnode;
+            }
+            return head;

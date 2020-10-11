@@ -1,0 +1,12 @@
+if(head == null)
+                 return null;
+
+     SinglyLinkedListNode revNode = null;
+
+      while(head != null){
+        SinglyLinkedListNode next = head.next;
+        head.next = revNode;
+        revNode = head;
+        head = next;
+      }
+    return revNode;

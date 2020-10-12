@@ -1,0 +1,14 @@
+SinglyLinkedListNode n=head;
+SinglyLinkedListNode n1=n.next;
+while(n.next!=null){
+    
+    if(n.data==n1.data){
+    n.next=n1.next;
+    n1=n.next; 
+    }
+    else if(n.data!=n1.data){
+        n=n1;
+        n1=n.next;
+    }
+}
+return head;

@@ -1,0 +1,9 @@
+if (head == null)
+            return new DoublyLinkedListNode(data);
+        if(head.data > data) {
+            DoublyLinkedListNode node = new DoublyLinkedListNode(data);
+            node.next = head;
+            return node;
+        }
+            head.next = sortedInsert(head.next, data);
+            return head;

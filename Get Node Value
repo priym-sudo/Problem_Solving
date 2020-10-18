@@ -1,0 +1,16 @@
+SinglyLinkedListNode h1 = head;
+        SinglyLinkedListNode h2 = head;
+        
+        // move first pointer right as many positions as defined from positinFromTail
+        for (int i=0; i<=positionFromTail; i++){
+            h1 = h1.next;
+        }
+
+        // now move both pointers right, until the first one reach the end
+        while (h1 != null){
+            h1 = h1.next;
+            h2 = h2.next;
+        }
+
+        // return the second pointer's data
+        return h2.data;

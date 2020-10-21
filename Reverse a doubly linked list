@@ -1,0 +1,11 @@
+DoublyLinkedListNode current=head;
+DoublyLinkedListNode next=null; 
+DoublyLinkedListNode previous=null;
+while(current!=null){
+    next=current.next;
+    current.next=previous;
+    current.prev=next;
+    previous=current;
+    current=next;
+}
+  return previous;
